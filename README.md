@@ -31,7 +31,7 @@ embedded_firmware/ 								"root directory"
 	|		|_ pwr_controller/ 					"power controller, both driver and ide codes"  
 	|		|_ dma/ 							"dma driver, both driver and ide codes"  
 	|		|_ projects/						"projects/applications created on the drivers like gpio, spi, i2c, device configuration tool etc"  
-	|			|_   
+	|			|_ udemy_mcu2_uart_helloworld	"basic uart, send a string "Hello World\n" to PC code"   
 	|_ rtos/  
 	|_ linux/  
 	|_ docs/  

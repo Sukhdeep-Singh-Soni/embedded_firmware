@@ -1,0 +1,51 @@
+# Ignore whole .metadata directory
+bare-metal/nucleo-f401re/projects/.metadata/
+
+# Ignore .settings directory
+bare-metal/nucleo-f401re/projects/udemy_mcu2_uart_helloworld/.settings/
+
+# Ignore *.launch files
+*.launch
+
+# Ignore *.list files, *.elf, *.map
+*.elf
+*.map
+*.list
+
+# Ignore .o, .log, .ini, .xml, .lock files
+*.o
+*.log
+*.ini
+*.xml
+*.lock
+
+# Ignore .plugins folder, .settings folder
+.plugins/
+.settings/
+
+# Ignore .cyclo, .d, .su files
+*.cyclo
+*.d
+*.su
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+.gitignore[+] [unix] (23:24 26/07/2025)                                                   4,1 All
+-- INSERT --
+
