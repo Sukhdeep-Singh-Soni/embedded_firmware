@@ -1,6 +1,6 @@
 # Directory Structure
 
-conventions
+## conventions
  - brd_xxx - board specific folder or file.
  - sch_xxx - schematic file
  - um_xxx  - user manual file
@@ -12,6 +12,9 @@ conventions
  - uc_xxx  - microcontroller specific folder or file
  - proc_xxx - processor specific folder or file
 
+## directory structure
+
+```
 embedded_firmware/ 								"root directory"  
 	|_ bare-metal/ 								"all driver codes and ide codes for bare metal"  
 	|	|_ nucleo-f401re/ 						"all driver and ide codes for nucleo-f401re board"  
@@ -43,3 +46,4 @@ embedded_firmware/ 								"root directory"
 			|_ archrm_armv7m.pdf  
 			|_ gug_cortex_m4.pdf  
 			|_ trm_arm_cortexm4_processor.pdf  
+```
