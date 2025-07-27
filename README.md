@@ -32,9 +32,9 @@ embedded_firmware/
 	|		|_ dma/ 							  
 	|		|_ projects/						                "bare metal projects, mostly application based not core driver development"    
 	|			|_ udemy_mcu2/                                  "projects related to udemy course mastering microcontroller timers, pwm, can, low power(mcu2)"    
-                    |_ 1_uart_helloworld                        "send a Hello World\n" string to PC from uart peripheral  
-                    |_ 2_uart_convert_uppercase_blocking        "receive string from PC in blocking mode and returns the string in all capital letters"  
-                    |_ 3_uart_convert_uppercase_with_interrupt  "receive string from PC in interript mode and returns the upper case converted string"  
+    |               |_ 1_uart_helloworld                        "send a Hello World\n" string to PC from uart peripheral  
+    |               |_ 2_uart_convert_uppercase_blocking        "receive string from PC in blocking mode and returns the string in all capital letters"  
+    |               |_ 3_uart_convert_uppercase_with_interrupt  "receive string from PC in interript mode and returns the upper case converted string"  
 	|_ rtos/  
 	|_ linux/  
 	|_ docs/  
