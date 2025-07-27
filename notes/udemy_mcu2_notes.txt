@@ -1,0 +1,45 @@
+- There are different layers in stm32 project
+```
+--------------------------------------
+		application
+--------------------------------------
+		Hal drivers
+--------------------------------------
+ Cimsis api    |
+-------------------------------------------------------------
+processor and its peripherals | microcontroller peripherals
+-------------------------------------------------------------
+```
+
+- The application layer uses the HAL api's to communicate to microcontroller peripherals.
+- The HAL layer uses CMSIS api's to communicate to processoser or processor associated peripherals (NVIC, SCB, MPU, SYSTICK).
+- To talk to other peripherals of the microcontroller the HAL layer don't use CMSIS api's, it directly access them.
+- CMSIS api's are given by arm (not written by STMicroelectronics) to create portable code.
+- The HAL layer is given by STMicroelectronics to create portable code in ST controllers.
+- Before calling HAL api's for the device we need to call the some initialization routines first like :
+	- HAL_Init()
+	- SysClockConfig() - configure the system clock (HSI/HSE/PLL)
+	- UART/ peripheral init - initialize the peripheral.
+	- call the device HAL routine line HAL_UART_Transmit
+- The Stm32 Cube framework
+	- first HAL_Init() function is called(stm32f4xx_hal.c) - mandatory
+	- Second SystemClock_Config() function is called - mandatory
+	- then any other HAL api's can be called
+- The HAL_Init() does the following tasks :
+	- initializes the flash interface (stm32f4xx_hal_conf.h)
+	- initializes the systick timer to generate interrupt every 1ms
+	- calls HAL_MspInit() - to perform other processor specific low level initializations(stm32f4xx_hal_msp.c)
+- The HAL_MspInit() does the following tasks :
+	- set NVIC priority grouping
+	- set NVIC priority for system exceptions to 0
+
+### peripheral initialization eg UARt
+- UART_Init() does high level initialization and calls UART_Msp_Init() which does the low level initialization
+- High level init means setting up baudrate ,parity etc and low level init means setting uart interrupt/priority gpio pin muxing, 
+- if interrupt api is used like uart_transmit_it() then whenever interrupt occurs it goes to it.c and from there it calls interrupt handler  
+  does interrupt processing and returns a callback to main.c
+
+### files in the project
+- stm32f4xx_hal_cortex.c - all the processor specific configuration api's will be here
+
+

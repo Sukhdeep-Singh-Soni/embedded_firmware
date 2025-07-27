@@ -15,23 +15,26 @@
 ## directory structure
 
 ```
-embedded_firmware/ 								"root directory"  
-	|_ bare-metal/ 								"all driver codes and ide codes for bare metal"  
-	|	|_ nucleo-f401re/ 						"all driver and ide codes for nucleo-f401re board"  
-	|		|_ gpio/ 							"gpio driver"  
-	|		|_ spi/ 							"spi driver, both driver and ide codes"  
-	|		|_ i2c/ 							"i2c driver, both driver and ide codes"  
-	|		|_ uart/ 							"uart driver, both driver and ide codes"  
-	|		|_ adc/ 							"adc driver, both driver and ide codes"  
-	|		|_ rtc/ 							"rtc driver, both driver and ide codes"  
-	|		|_ timer/ 							"timer driver, both driver and ide codes"  
-	|		|_ rcc/ 							"rcc driver, both driver and ide codes"  
-	|		|_ syscfg/ 							"syscfg driver, both driver and ide codes"  
-	|		|_ exti/ 							"external interrupt controller driver, both driver and ide codes"  
-	|		|_ pwr_controller/ 					"power controller, both driver and ide codes"  
-	|		|_ dma/ 							"dma driver, both driver and ide codes"  
-	|		|_ projects/						"projects/applications created on the drivers like gpio, spi, i2c, device configuration tool etc"  
-	|			|_ udemy_mcu2_uart_helloworld	"basic uart, send a string "Hello World\n" to PC code"   
+embedded_firmware/    
+	|_ bare-metal/ 					"all driver codes and ide codes for bare metal"  
+	|	|_ nucleo-f401re/ 						              
+	|		|_ gpio/ 							          
+	|		|_ spi/ 							  
+	|		|_ i2c/ 							  
+	|		|_ uart/ 						  
+	|		|_ adc/ 							  
+	|		|_ rtc/ 							  
+	|		|_ timer/ 							  
+	|		|_ rcc/ 							  
+	|		|_ syscfg/ 							  
+	|		|_ exti/ 							  
+	|		|_ pwr_controller/ 					  
+	|		|_ dma/ 							  
+	|		|_ projects/						                "bare metal projects, mostly application based not core driver development"  
+	|			|_ udemy_mcu2/                                  "projects related to udemy course mastering microcontroller timers, pwm, can, low power(mcu2)"  
+                    |_ 1_uart_helloworld                        "send a Hello World\n" string to PC from uart peripheral
+                    |_ 2_uart_convert_uppercase_blocking        "receive string from PC in blocking mode and returns the string in all capital letters"
+                    |_ 3_uart_convert_uppercase_with_interrupt  "receive string from PC in interript mode and returns the upper case converted string"
 	|_ rtos/  
 	|_ linux/  
 	|_ docs/  
