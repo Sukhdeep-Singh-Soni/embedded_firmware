@@ -42,4 +42,8 @@ processor and its peripherals | microcontroller peripherals
 ### files in the project
 - stm32f4xx_hal_cortex.c - all the processor specific configuration api's will be here
 
-
+### low power modes
+- processor specific low power modes - refer to trm of arm
+- microcontroller specific low power modes - refer to vendor specific user manuals/application notes/datasheets/refrence manuals
+- mcu modes - run mode and low power mode, low power mode - processor specific and vendor specific
+- proc specific low power mode - normal sleep and deep sleep (configured by SLEEPDEEP bit in SCB block), put proc to sleep via WFI/WFE/Sleep on exit feature.
